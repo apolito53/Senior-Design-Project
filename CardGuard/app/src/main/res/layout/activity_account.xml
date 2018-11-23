@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    tools:context="com.newtest.test.test.Account">
+
+    <LinearLayout
+        android:id="@+id/top_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/settings_button"
+            android:layout_width="112dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:layout_weight=".4"
+            android:hapticFeedbackEnabled="true"
+            android:text="@string/settings" />
+
+        <Button
+            android:id="@+id/notifications_button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:layout_weight=".4"
+            android:hapticFeedbackEnabled="true"
+            android:text="@string/notifications" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_greeting"
+        android:layout_margin="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/top_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/recent_transactions_label"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/text_greeting"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/recent_transactions"
+        tools:layout_centerHorizontal="true" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:hapticFeedbackEnabled="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/recent_transactions_label"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+
+        <LinearLayout
+            android:id="@+id/button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="DuplicateIds" />
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/full_transaction_history_button"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/scroll_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:hapticFeedbackEnabled="true"
+        android:text="@string/full_history" />
+
+    <Button
+        android:id="@+id/new_transaction_button"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:hapticFeedbackEnabled="true"
+        android:text="@string/new_transaction" />
+</RelativeLayout>
